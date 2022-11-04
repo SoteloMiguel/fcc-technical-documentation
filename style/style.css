@@ -1,0 +1,254 @@
+:root{
+  --main-color: #8498BF;
+  --header-color: #C1C7D9;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Frank Ruhl Libre', serif;
+  line-height: 2rem;
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: row;
+}
+/* ***************
+  NAVBAR
+*************** */
+#navbar{
+  background-color:var(--main-color);
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20vw;
+  min-height: 100%;
+  z-index: 5;
+}
+#navbar .nav-header .img-php{
+  padding-top: 20px;
+  width: 120px;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+#navbar .nav-header h1{
+  font-size: 3rem;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  text-shadow: 0 7px 2px var(--header-color);
+}
+#navbar ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+}
+#navbar li{
+  display: block;
+  width: 100%;
+  position: relative;
+  margin: 5px 0;
+}
+#navbar .nav-link{
+  display: block;
+  width: 100%;
+  padding: 5px;
+  font-size: inherit;
+  text-decoration: none;
+  color: #000;
+  background-color: rgb(208, 205, 211);
+  border-radius: 3px;
+}
+#navbar .nav-link:hover,
+.main-footer a:hover{
+font-weight: 500;
+background-color: #96b6f7;
+border-radius: 3px;
+text-align: center;
+box-shadow: 0 3px 2px 1px #53565e;
+}
+
+/* ***************
+    MAIN CONTENT
+*************** */
+#main-doc{
+  background-color: var(--header-color);
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 15px 30px 40px 30px;
+  max-width: 80vw;
+  min-height: 100vh;
+  font-size: inherit;
+}
+#main-doc .main-section{
+  width: 95%;
+  text-align: justify;
+}
+#main-doc .main-section header{
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin: 25px 0 20px 0;
+  text-decoration: underline;
+}
+#main-doc .main-section article{
+  margin: 0 2rem;
+  width: 100%;
+}
+#main-doc .main-section article p code{
+  display: inline;
+}
+#main-doc .main-section article p code,
+#main-doc .main-section article code{
+  font-style: italic;
+  background-color: rgb(208, 205, 211);
+  padding: 5px;
+}
+#main-doc .main-section article > code{
+  display: block;
+  padding-left: 7rem;
+  overflow: auto;
+}
+span{
+  color: rgb(4, 0, 255);
+}
+/* ***************
+    FOOTER
+*************** */
+/*.main-footer{
+  background-color: var(--main-color);
+  position: relative;
+  margin: 10px auto 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: inherit;
+  padding: 15px;
+}
+.main-footer a{
+  display: block;
+  text-decoration: none;
+  color: #000;
+  background-color: rgb(208, 205, 211);
+  padding: 3px;
+  margin: 5px 10px;
+  border-radius: 3px;
+  outline: none;
+}*/
+
+/* ****************
+    ***************
+    MEDIA QUERIES
+    ***************
+**************** */
+
+/* **************
+  *****************
+  ***** 1650 ******
+  *****************
+  *************** */
+@media (max-width: 1650px){
+  #navbar .nav-header h1{
+      font-size: 2.3rem;
+      margin-top: 25px;
+      margin-bottom: 25px;
+  }
+}
+@media (max-width: 1270px){
+  #navbar .nav-header h1{
+      font-size: 2rem;
+      margin-top: 25px;
+      margin-bottom: 25px;
+  }
+}
+
+
+/* **************
+  *****************
+  ****** 750 ******
+  *****************
+  *************** */
+@media (max-width: 750px){
+  body{
+    line-height: 1.5rem;
+    font-size: .8rem;
+  }
+  /* ***************
+    NAVBAR
+  *************** */
+  #navbar{
+    width: 35vw;
+    min-height: 100%;
+  }
+  #navbar .nav-header .img-php{
+    padding-top: 20px;
+    width: 60px;
+    height: auto;
+  }
+  #navbar .nav-header h1{
+    font-size: 1.2rem;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  #navbar li{
+    margin: 3px 0;
+  }
+  #navbar .nav-link{
+    font-size: inherit;
+    padding: 3px;
+  }
+  /* ***************
+      MAIN CONTENT
+  *************** */
+  #main-doc{
+    padding: 10px 10px 0 10px;
+    max-width: 65vw;
+    min-height: 100vh;
+    font-size: inherit;
+  }
+  
+  #main-doc .main-section header h1{
+    margin: 10px 0;
+  }
+  #main-doc .main-section article{
+    margin: 0 1rem 0 .5rem;
+  }
+  #main-doc .main-section article p code,
+  #main-doc .main-section article code{
+    padding: 5px;
+  }
+  #main-doc .main-section article > code{
+    padding-left: 2rem;
+  }
+  /* ***************
+      FOOTER
+  *************** */
+  .main-footer{
+    margin: 10px 0 0;
+    min-width: 100%;
+    font-size: inherit;
+    padding: 3px;
+    flex-direction: column;
+  }
+  .main-footer a{
+    padding: 3px 5px;
+    margin: 5px auto;
+    border-radius: 3px;
+  }
+}
+ 
